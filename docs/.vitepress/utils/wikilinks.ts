@@ -98,8 +98,7 @@ export function wikilinksPlugin(options: WikilinksOptions) {
       } else {
         const resolvedRoute = fileMap.get(targetFile.toLowerCase())
         if (resolvedRoute) {
-          const prefix = base && base !== '/' ? base.replace(/\/$/, '') : ''
-          href = prefix + resolvedRoute + hash
+          href = resolvedRoute + hash
         }
       }
 
